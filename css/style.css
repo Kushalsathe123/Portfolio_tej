@@ -1408,3 +1408,91 @@ border-radius: 6px;
         float: left;
     }
 }
+
+
+
+
+
+
+
+
+
+.education-box {
+    background: linear-gradient(to right, #a800a8, #d122e3);
+    color: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px; /* Set a fixed height for consistency */
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    
+    
+}
+
+.education-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.education-box h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.education-box h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.education-box p {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+
+
+
+.education-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+.education-box:hover::before {
+    opacity: 1;
+}
+
+
+.education-box * {
+    position: relative;
+    z-index: 1;
+}
+
